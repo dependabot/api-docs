@@ -28,7 +28,7 @@ permissions to undertake any actions you request through the Dependabot API.
 GET https://api.dependabot.com/accounts
 ```
 
-Returns all Dependabot accounts that the authenticated user has access to
+Returns all Dependabot accounts that the authenticated user has access to.
 
 <details>
 <summary>Example response</summary>
@@ -390,15 +390,14 @@ POST https://api.dependabot.com/update_configs
 Creates an update config. In addition, the following parameters can also be
 passed:
 
-```
-{
-  "target-branch": "dev",
-  "lockfile-only": true,
-  "security-updates-only": false,
-  "automerge-rule-development-deps": "patch",
-  "automerge-rule-runtime-deps": "minor"
-}
-```
+| Attribute                        | Default               | Description                                  |
+|----------------------------------|-----------------------|----------------------------------------------|
+| target-branch                    | GitHub default branch | The branch to create PRs against. |
+| lockfile-only                    | false                 | Ignore updates that are out-of-range of the manifest file. |
+| security-updates-only            | false                 | Only generate PRs for updates that fix a security vulnerability. |
+| automerge-rule-development-deps  | "never"               | One of "never", "security", "patch", or "minor". |
+| "automerge-rule-runtime-deps     | "never"               | One of "never", "security", "patch", or "minor". |
+
 
 ### Update an existing Update Config
 
