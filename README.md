@@ -2,7 +2,7 @@
 
 # Dependabot API docs
 
-Dependabot has an API to make it easy to bulk-import projects. This API is also
+Dependabot has a JSON API to make it easy to bulk-import projects. This API is also
 used by the Dependabot dashboard.
 
 **Please note that Dependabot cannot commit to maintaining backwards
@@ -405,6 +405,7 @@ passed:
 PATCH https://api.dependabot.com/update_configs/:id
 
 {
+  "update-schedule": "live",
   "target-branch": "dev",
   "lockfile-only": true,
   "security-updates-only": false,
@@ -413,3 +414,5 @@ PATCH https://api.dependabot.com/update_configs/:id
   "automerge-rule-runtime-deps": "minor"
 }
 ```
+
+Update an update config, for example to change its update schedule.
