@@ -14,8 +14,9 @@ you "watch" this repo to receive notifications of any changes.
 
 Dependabot uses GitHub access tokens to authenticate users. To use the API:
 - Create a [GitHub personal access token](https://github.com/settings/tokens)
-  with the `repo` permissions (so the token can be used for private repos)
-- Add a `Authorization: Personal <token>` header to all requests
+  with `repo` permissions (so the token can see private repos)
+- Add an `Authorization: Personal <token>` header to all requests using this
+  access token
 
 We use the access token you provide to ensure you have sufficient GitHub
 permissions to undertake any actions you request through the Dependabot API.
