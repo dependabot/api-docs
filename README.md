@@ -5,8 +5,8 @@
 Dependabot has an API to make it easy to bulk-import projects. This API is also
 used by the Dependabot dashboard.
 
-**Note:** Please note that Dependabot makes no commitment to maintaining
-backwards compatibility of this API. We will, however, update these docs
+**Please note that Dependabot cannot commit to maintaining backwards
+compatibility of this API**. We will, however, update these docs
 whenever breaking changes are made (likely to be infrequently). We recommend
 you "watch" this repo to receive notifications of any changes.
 
