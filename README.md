@@ -392,11 +392,11 @@ passed:
 
 | Attribute                        | Default        | Description                                  |
 |----------------------------------|-----------------------|----------------------------------------------|
-| target-branch                    | GitHub default | The branch to create PRs against. |
-| lockfile-only                    | false          | Ignore updates that are out-of-range of the manifest file. |
-| security-updates-only            | false          | Only generate PRs for updates that fix a security vulnerability. |
-| automerge-rule-development-deps  | "never"        | One of "never", "security", "patch", or "minor". |
-| "automerge-rule-runtime-deps     | "never"        | One of "never", "security", "patch", or "minor". |
+| `target-branch`                    | GitHub default | The branch to create PRs against. |
+| `lockfile-only`                    | false          | Ignore updates that are out-of-range of the manifest file. |
+| `security-updates-only`            | false          | Only generate PRs for updates that fix a security vulnerability. |
+| `automerge-rule-development-deps`  | "never"        | One of "never", "security", "patch", or "minor". |
+| `automerge-rule-runtime-deps`     | "never"        | One of "never", "security", "patch", or "minor". |
 
 
 ### Update an existing Update Config
