@@ -89,7 +89,7 @@ Returns all Dependabot accounts that the authenticated user has access to.
 GET https://api.dependabot.com/repos?account-id=27347476&account-type=org&installation-state=active
 ```
 
-Returns all Dependabot accounts that the authenticated user has access to. Allowed states are `active` and `inactive`.
+Returns all repos for the specified account. Allowed states are `active` and `inactive`.
 
 <details>
 <summary>Example response</summary>
