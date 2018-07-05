@@ -419,7 +419,7 @@ PATCH https://api.dependabot.com/update_configs/:id
 Update an update config, for example to change its update schedule.
 
 
-### Notify Dependabot of the release of a private dependency
+### Notify Dependabot of a private dependency release
 
 ```
 POST https://api.dependabot.com/release_notifications/private
