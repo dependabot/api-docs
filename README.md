@@ -436,6 +436,10 @@ will check all of the repos that belong to an organisation your access token has
 access to. If any use an outdated version of the dependency and have their
 update schedule set to `live` Dependabot will create update PRs for them.
 
+The `name` attribute should be the name of the dependency. For Java dependencies
+the name is constructed from the `groupId` and `artifactId` of the dependency,
+joined by a `:` (for example: `org.kohsuke:github-api`).
+
 This endpoint is useful to get immediate updates to private dependencies.
 However, if you release a new version of a private dependency but don't notify
 Dependabot then it will still pick it up the following morning.
