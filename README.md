@@ -1,4 +1,6 @@
-![Dependabot](https://s3.eu-west-2.amazonaws.com/dependabot-images/logo-with-name-horizontal.svg)
+<p align="center">
+  <img src="https://s3.eu-west-2.amazonaws.com/dependabot-images/logo-with-name-horizontal.svg?v2" alt="Dependabot" width="224">
+</p>
 
 # Dependabot API docs
 
