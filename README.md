@@ -421,6 +421,15 @@ PATCH https://api.dependabot.com/update_configs/:id
 Update an update config, for example to change its update schedule.
 
 
+### Delete an existing Update Config
+
+```
+DELETE https://api.dependabot.com/update_configs/:id
+```
+
+Delete an update config.
+
+
 ### Notify Dependabot of a private dependency release
 
 ```
