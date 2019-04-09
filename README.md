@@ -193,8 +193,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "package-manager": "npm_and_yarn",
                 "update-schedule": "live",
                 "directory": "/helpers/npm",
-                "automerge-rule-runtime-deps": "patch",
-                "automerge-rule-development-deps": "minor",
+                "automerge-rule-runtime-deps": "semver:patch",
+                "automerge-rule-development-deps": "semver:minor",
                 "target-branch": null,
                 "lockfile-only": false,
                 "security-updates-only": false
@@ -239,8 +239,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "package-manager": "composer",
                 "update-schedule": "live",
                 "directory": "/helpers/php",
-                "automerge-rule-runtime-deps": "patch",
-                "automerge-rule-development-deps": "patch",
+                "automerge-rule-runtime-deps": "semver:patch",
+                "automerge-rule-development-deps": "semver:patch",
                 "target-branch": null,
                 "lockfile-only": false,
                 "security-updates-only": false
@@ -262,8 +262,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "package-manager": "npm_and_yarn",
                 "update-schedule": "live",
                 "directory": "/helpers/yarn",
-                "automerge-rule-runtime-deps": "patch",
-                "automerge-rule-development-deps": "minor",
+                "automerge-rule-runtime-deps": "semver:patch",
+                "automerge-rule-development-deps": "semver:minor",
                 "target-branch": null,
                 "lockfile-only": false,
                 "security-updates-only": false
@@ -285,8 +285,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "package-manager": "pip",
                 "update-schedule": "live",
                 "directory": "/helpers/python",
-                "automerge-rule-runtime-deps": "patch",
-                "automerge-rule-development-deps": "patch",
+                "automerge-rule-runtime-deps": "semver:patch",
+                "automerge-rule-development-deps": "semver:patch",
                 "target-branch": null,
                 "lockfile-only": false,
                 "security-updates-only": false
@@ -308,8 +308,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "package-manager": "bundler",
                 "update-schedule": "live",
                 "directory": "/",
-                "automerge-rule-runtime-deps": "patch",
-                "automerge-rule-development-deps": "patch",
+                "automerge-rule-runtime-deps": "semver:patch",
+                "automerge-rule-development-deps": "semver:patch",
                 "target-branch": null,
                 "lockfile-only": false,
                 "security-updates-only": false
@@ -331,8 +331,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "package-manager": "hex",
                 "update-schedule": "live",
                 "directory": "/helpers/elixir",
-                "automerge-rule-runtime-deps": "patch",
-                "automerge-rule-development-deps": "patch",
+                "automerge-rule-runtime-deps": "semver:patch",
+                "automerge-rule-development-deps": "semver:patch",
                 "target-branch": null,
                 "lockfile-only": false,
                 "security-updates-only": false
@@ -393,13 +393,13 @@ POST https://api.dependabot.com/update_configs
 Creates an update config. In addition, the following parameters can also be
 passed:
 
-| Attribute                        | Default        | Description                                  |
-|----------------------------------|-----------------------|----------------------------------------------|
-| `target-branch`                    | GitHub default | The branch to create PRs against. |
-| `lockfile-only`                    | false          | Ignore updates that are out-of-range of the manifest file. |
-| `security-updates-only`            | false          | Only generate PRs for updates that fix a security vulnerability. |
-| `automerge-rule-development-deps`  | "never"        | One of "never", "security", "patch", or "minor". |
-| `automerge-rule-runtime-deps`     | "never"        | One of "never", "security", "patch", or "minor". |
+| Attribute                         | Default        | Description                                  |
+|-----------------------------------|----------------|----------------------------------------------|
+| `target-branch`                   | GitHub default | The branch to create PRs against. |
+| `lockfile-only`                   | false          | Ignore updates that are out-of-range of the manifest file. |
+| `security-updates-only`           | false          | Only generate PRs for updates that fix a security vulnerability. |
+| `automerge-rule-development-deps` | "never"        | One of "never", "security:patch", "semver:patch", "semver:minor", "in_range" or "all". |
+| `automerge-rule-runtime-deps`     | "never"        | One of "never", "security:patch", "semver:patch", "semver:minor", "in_range" or "all". |
 
 
 ### Update an existing Update Config
@@ -413,8 +413,8 @@ PATCH https://api.dependabot.com/update_configs/:id
   "lockfile-only": true,
   "security-updates-only": false,
   "update-schedule": "daily",
-  "automerge-rule-development-deps": "patch",
-  "automerge-rule-runtime-deps": "minor"
+  "automerge-rule-development-deps": "semver:patch",
+  "automerge-rule-runtime-deps": "semver:minor"
 }
 ```
 
