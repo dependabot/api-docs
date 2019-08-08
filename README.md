@@ -447,6 +447,10 @@ will check all of the repos that belong to an organisation your access token has
 access to. If any use an outdated version of the dependency and have their
 update schedule set to `live` Dependabot will create update PRs for them.
 
+Note that this API is *not* a substitute for Dependabot being able to access
+your registry. When notified of a new version Dependabot triggers update runs
+which will query your registry for the latest version.
+
 The `name` attribute should be the name of the dependency. For Java dependencies
 the name is constructed from the `groupId` and `artifactId` of the dependency,
 joined by a `:` (for example: `org.kohsuke:github-api`).
