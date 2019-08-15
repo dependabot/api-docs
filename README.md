@@ -390,8 +390,7 @@ POST https://api.dependabot.com/update_configs
 }
 ```
 
-Creates an update config. The following parameters can also be
-passed:
+Creates an update config. The following parameters can be passed:
 
 | Attribute                         | Default        | Description                                  |
 |-----------------------------------|----------------|----------------------------------------------|
