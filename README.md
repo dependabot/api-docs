@@ -390,11 +390,17 @@ POST https://api.dependabot.com/update_configs
 }
 ```
 
-Creates an update config. In addition, the following parameters can also be
+Creates an update config. The following parameters can also be
 passed:
 
 | Attribute                         | Default        | Description                                  |
 |-----------------------------------|----------------|----------------------------------------------|
+| `repo-id`                         | None (required)| The GitHub ID of the repository              |
+| `account-id`                      | None (required)| The GitHub ID of the repository owner        |
+| `account-type`                    | None (required)| `org` or `user`                              |
+| `directory`                       | None (required)| The directory of the dependency files. Normally `/` |
+| `update-schedule`                 | None (required)| One of `live`, `daily`, `weekly` or `monthly` |
+| `package-manager`                 | None (required)| One of `bundler`, `composer`, `docker`, `maven`, `npm_and_yarn`, `elm`, `submodules`, `hex`, `cargo`, `gradle`, `nuget`, `dep`, `go_modules`, `pip`, `terraform`, `github_actions` |
 | `target-branch`                   | GitHub default | The branch to create PRs against. |
 | `lockfile-only`                   | false          | Ignore updates that are out-of-range of the manifest file. |
 | `security-updates-only`           | false          | Only generate PRs for updates that fix a security vulnerability. |
