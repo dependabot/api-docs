@@ -449,18 +449,8 @@ POST https://api.dependabot.com/release_notifications/private
 
 Notifes Dependabot of a private dependency release. In response, Dependabot
 will check all of the repos that belong to an organisation your access token has
-access to. If any use an outdated version of the dependency and have their
-update schedule set to `live` Dependabot will create update PRs for them.
-
-Only the following package managers support `live` update schedules:
-
-- `javascript`
-- `ruby:bundler`
-- `python`
-- `php:composer`
-- `dotnet:nuget`
-- `rust:cargo`
-- `elixir:hex`
+access to. If any use an outdated version of the dependency Dependabot will
+create update PRs for them.
 
 Note that this API is *not* a substitute for Dependabot being able to access
 your registry. When notified of a new version Dependabot triggers update runs
