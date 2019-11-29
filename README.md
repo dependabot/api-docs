@@ -91,7 +91,14 @@ Returns all Dependabot accounts that the authenticated user has access to.
 GET https://api.dependabot.com/repos?account-id=27347476&account-type=org&installation-state=active
 ```
 
-Returns all repos for the specified account. Allowed states are `active` and `inactive`.
+Returns active or inactive repos for the specified account.
+
+#### Breaking change introduced 2019-12-02
+
+- The `installation-state` param **must** be `active` or `inactive`
+- `inactive` repos are paginated (100 repos per page)
+  - Pass the `page=num` param to paginate the results (defaults to `page=1`)
+  - The next page number is returned in the response: `response.meta.pages.next`
 
 <details>
 <summary>Example response</summary>
@@ -110,7 +117,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "fork": false,
                 "github-url": "https://github.com/dependabot/dependabot-core",
                 "primary-language": "ruby",
-                "default-branch": "master"
+                "default-branch": "master",
+                "using-config-file":true
             },
             "relationships": {
                 "update-configs": {
@@ -164,7 +172,8 @@ Returns all repos for the specified account. Allowed states are `active` and `in
                 "fork": false,
                 "github-url": "https://github.com/dependabot/dependabot-script",
                 "primary-language": "ruby",
-                "default-branch": "master"
+                "default-branch": "master",
+                "using-config-file":true
             },
             "relationships": {
                 "update-configs": {
