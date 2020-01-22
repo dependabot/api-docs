@@ -451,7 +451,7 @@ POST https://api.dependabot.com/release_notifications/private
 
 {
   "name": "your_dependency_name",
-  "version": "1.5.0"
+  "version": "1.5.0",
   "package-manager": "bundler"
 }
 ```
