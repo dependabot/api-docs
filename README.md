@@ -412,8 +412,8 @@ Creates an update config. The following parameters can be passed:
 | `target-branch`                   | GitHub default | The branch to create PRs against |
 | `lockfile-only`                   | false          | Ignore updates that are out-of-range of the manifest file |
 | `security-updates-only`           | false          | Only generate PRs for updates that fix a security vulnerability |
-| `automerge-rule-development-deps` | "never"        | One of "never", "security:patch", "semver:patch", "semver:minor", "in_range" or "all" |
-| `automerge-rule-runtime-deps`     | "never"        | One of "never", "security:patch", "semver:patch", "semver:minor", "in_range" or "all" |
+| `automerge-rule-development-deps` | `never`        | One of `never`, `security:patch`, `semver:patch`, `semver:minor`, `in_range` or `all` |
+| `automerge-rule-runtime-deps`     | `never`        | One of `never`, `security:patch`, `semver:patch`, `semver:minor`, `in_range` or `all` |
 
 
 ### Update an existing Update Config
