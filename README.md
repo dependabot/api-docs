@@ -432,7 +432,7 @@ PATCH https://api.dependabot.com/update_configs/:id
 }
 ```
 
-Update an update config, for example to change its update schedule.
+Update an update config, for example, to change its update schedule.
 
 
 ### Delete an existing Update Config
@@ -457,7 +457,7 @@ POST https://api.dependabot.com/release_notifications/private
 ```
 
 Notifies Dependabot of a private dependency release. In response, Dependabot
-will check all of the repos that belong to an organisation your access token has
+will check all of the repos that belong to an organization your access token has
 access to. If any use an outdated version of the dependency Dependabot will
 create update PRs for them.
 
