@@ -456,7 +456,7 @@ POST https://api.dependabot.com/release_notifications/private
 }
 ```
 
-Notifes Dependabot of a private dependency release. In response, Dependabot
+Notifies Dependabot of a private dependency release. In response, Dependabot
 will check all of the repos that belong to an organisation your access token has
 access to. If any use an outdated version of the dependency Dependabot will
 create update PRs for them.
