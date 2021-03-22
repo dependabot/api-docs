@@ -409,11 +409,11 @@ Creates an update config. The following parameters can be passed:
 | `directory`                       | None (required)| The directory of the dependency files. Normally `/` |
 | `update-schedule`                 | None (required)| One of `live`, `daily`, `weekly` or `monthly` |
 | `package-manager`                 | None (required)| One of `bundler`, `composer`, `docker`, `maven`, `npm_and_yarn`, `elm`, `submodules`, `hex`, `cargo`, `gradle`, `nuget`, `dep`, `go_modules`, `pip`, `terraform`, `github_actions` |
-| `target-branch`                   | GitHub default | The branch to create PRs against. |
-| `lockfile-only`                   | false          | Ignore updates that are out-of-range of the manifest file. |
-| `security-updates-only`           | false          | Only generate PRs for updates that fix a security vulnerability. |
-| `automerge-rule-development-deps` | "never"        | One of "never", "security:patch", "semver:patch", "semver:minor", "in_range" or "all". |
-| `automerge-rule-runtime-deps`     | "never"        | One of "never", "security:patch", "semver:patch", "semver:minor", "in_range" or "all". |
+| `target-branch`                   | GitHub default | The branch to create PRs against |
+| `lockfile-only`                   | false          | Ignore updates that are out-of-range of the manifest file |
+| `security-updates-only`           | false          | Only generate PRs for updates that fix a security vulnerability |
+| `automerge-rule-development-deps` | `never`        | One of `never`, `security:patch`, `semver:patch`, `semver:minor`, `in_range` or `all` |
+| `automerge-rule-runtime-deps`     | `never`        | One of `never`, `security:patch`, `semver:patch`, `semver:minor`, `in_range` or `all` |
 
 
 ### Update an existing Update Config
@@ -432,7 +432,7 @@ PATCH https://api.dependabot.com/update_configs/:id
 }
 ```
 
-Update an update config, for example to change its update schedule.
+Update an update config, for example, to change its update schedule.
 
 
 ### Delete an existing Update Config
@@ -457,7 +457,7 @@ POST https://api.dependabot.com/release_notifications/private
 ```
 
 Notifies Dependabot of a private dependency release. In response, Dependabot
-will check all of the repos that belong to an organisation your access token has
+will check all of the repos that belong to an organization your access token has
 access to. If any use an outdated version of the dependency Dependabot will
 create update PRs for them.
 
