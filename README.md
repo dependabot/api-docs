@@ -2,6 +2,15 @@
   <img src="https://s3.eu-west-2.amazonaws.com/dependabot-images/logo-with-name-horizontal.svg?v5" alt="Dependabot" width="336">
 </p>
 
+# Deprecation notice
+
+Dependabot Preview is [scheduled for shutdown on August 3rd, 2021](https://github.blog/2021-04-29-goodbye-dependabot-preview-hello-dependabot/),
+which means that the Dependabot Preview REST API documented here will also
+be shut down. This repository has been archived to reflect that.
+
+Please migrate to [GitHub-native Dependabot](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates)
+before then in order to continue keeping your dependencies up to date.
+
 # Dependabot API docs
 
 Dependabot has a JSON API to make it easy to bulk-import projects. This API is also
